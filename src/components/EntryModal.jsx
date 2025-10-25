@@ -217,19 +217,19 @@ export default function AddLogModal({
 
           {/* Products Section */}
           <div className="border-t border-slate-200 pt-6">
-            <div className="flex justify-between items-center mb-4">
+            <div className="flex justify-between items-start sm:items-center mb-4">
               <div>
                 <h3 className="text-lg font-semibold text-slate-900">
                   Products
                 </h3>
-                <p className="text-sm text-slate-600">
+                <p className="text-xs sm:text-sm text-slate-600">
                   Add products and tonnage for each trip
                 </p>
               </div>
               <button
                 type="button"
                 onClick={handleAddProduct}
-                className="flex items-center gap-2 text-sm sm:text-base px-4 py-2 bg-emerald-50 text-emerald-700 rounded-xl hover:bg-emerald-100 transition-colors duration-200 font-medium"
+                className="flex items-center gap-2 text-sm sm:text-base px-4 py-2 sm:bg-emerald-50 text-emerald-700 rounded-xl hover:bg-emerald-100 transition-colors duration-200 font-medium min-w-fit"
               >
                 <svg
                   className="w-4 h-4"
@@ -341,19 +341,21 @@ export default function AddLogModal({
 
           {/* Summary Section */}
           <div className="border-t border-slate-200 pt-6 mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-6">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
               <div className="bg-slate-50 rounded-2xl p-4">
                 <div className="text-sm font-medium text-slate-600 mb-1">
                   Total Trips
                 </div>
-                <div className="text-2xl font-bold text-slate-900">{trips}</div>
+                <div className="text-md sm:text-2xl font-bold text-slate-900">
+                  {trips}
+                </div>
               </div>
 
               <div className="bg-slate-50 rounded-2xl p-4">
                 <div className="text-sm font-medium text-slate-600 mb-1">
                   Total Tonnage
                 </div>
-                <div className="text-2xl font-bold text-slate-900">
+                <div className="text-md sm:text-2xl font-bold text-slate-900">
                   {getTotalTonnage().toFixed(2)}t
                 </div>
               </div>
@@ -362,7 +364,7 @@ export default function AddLogModal({
                 <div className="text-sm font-medium text-blue-600 mb-1">
                   Transport Cost
                 </div>
-                <div className="text-2xl font-bold text-blue-900">
+                <div className="text-md sm:text-2xl font-bold text-blue-900">
                   {formatCurrency(calculateTransportTotal())}
                 </div>
               </div>
@@ -371,7 +373,7 @@ export default function AddLogModal({
                 <div className="text-sm font-medium text-emerald-600 mb-1">
                   Products Total
                 </div>
-                <div className="text-2xl font-bold text-emerald-900">
+                <div className="text-md sm:text-2xl font-bold text-emerald-900">
                   {formatCurrency(
                     newLog.products.reduce(
                       (sum, p) => sum + calculateProductTotal(p),
