@@ -427,34 +427,24 @@ export default function BusinessPage() {
                         >
                           <div className="flex  flex-col gap-4 text-sm">
                             <div className="flex justify-between items-center">
-                              <div className="text-slate-500 text-xs mb-1">
+                              <div className="text-slate-500 text-sm mb-1">
                                 Product
                               </div>
                               <div className="font-medium">{p.name}</div>
                             </div>
                             <div className="flex justify-between items-center">
-                              <div className="text-slate-500 text-xs mb-1">
+                              <div className="text-slate-500 text-sm mb-1">
                                 Trips
                               </div>
                               <div className="font-medium">{productTrips}</div>
                             </div>
                             <div className="flex justify-between items-center">
-                              <div className="text-slate-500 text-xs mb-1">
+                              <div className="text-slate-500 text-sm mb-1">
                                 Tonnage
                               </div>
                               <div className="font-medium">
                                 {totalTons.toFixed(1)}t
                               </div>
-                            </div>
-                            <div className="flex justify-between text-sm">
-                              <span className="text-slate-600">Transport:</span>
-                              <span className="font-medium">
-                                <span className="font-medium">
-                                  {formatCurrency(
-                                    log.trips * TRANSPORT_COST[log.location]
-                                  )}
-                                </span>
-                              </span>
                             </div>
                             <div className="flex justify-between text-sm">
                               <span className="text-slate-600">
@@ -472,6 +462,16 @@ export default function BusinessPage() {
                                     );
                                   }, 0)
                                 )}
+                              </span>
+                            </div>
+                            <div className="flex justify-between text-sm">
+                              <span className="text-slate-600">Transport:</span>
+                              <span className="font-medium">
+                                <span className="font-medium">
+                                  {formatCurrency(
+                                    log.trips * TRANSPORT_COST[log.location]
+                                  )}
+                                </span>
                               </span>
                             </div>
                           </div>
