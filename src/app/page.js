@@ -39,7 +39,7 @@ export default function Home() {
       <div className="max-w-7xl mx-auto mb-16">
         <div className="flex justify-between items-start mb-2">
           <div>
-            <h1 className="text-3xl font-bold text-slate-900 mb-2">
+            <h1 className="text-2xl sm:text-3xl font-bold text-slate-900 mb-2">
               Bumeh Homes
             </h1>
             <p className="text-slate-600 text-sm">
@@ -47,8 +47,8 @@ export default function Home() {
             </p>
           </div>
           <div className="flex items-center gap-3 bg-white/80 backdrop-blur-sm rounded-2xl px-4 py-3 shadow-sm border border-white/50">
-            <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse"></div>
-            <span className="text-sm font-medium text-slate-700">
+            <div className="w-3 h-3 bg-emerald-400 rounded-full animate-pulse min-w-3"></div>
+            <span className="text-sm font-medium text-slate-700 min-w-fit">
               {businesses.length} businesses
             </span>
           </div>

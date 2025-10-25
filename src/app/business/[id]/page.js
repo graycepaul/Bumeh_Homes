@@ -131,11 +131,11 @@ export default function BusinessPage() {
                   />
                 </svg>
               </button>
-              <h1 className="text-3xl font-bold text-slate-900">
-                Quarry Operations
+              <h1 className="text-xl sm:text-3xl font-bold text-slate-900">
+                Quarry
               </h1>
             </div>
-            <p className="text-slate-600 text-lg ml-12">
+            <p className="text-slate-600 text-sm sm:text-lg ml-12">
               Delivery Logs & Analytics
             </p>
           </div>
@@ -172,12 +172,12 @@ export default function BusinessPage() {
         </div>
 
         {/* Stats Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
           <div className="bg-gradient-to-br from-slate-900 to-slate-800 rounded-3xl p-6 text-white">
             <div className="text-sm font-medium text-slate-300 mb-2">
               Total Revenue
             </div>
-            <div className="text-2xl font-bold">
+            <div className="text-md sm:text-2xl font-bold">
               {formatCurrency(getTotalRevenue())}
             </div>
             <div className="text-xs text-slate-400 mt-2">
@@ -186,10 +186,8 @@ export default function BusinessPage() {
           </div>
 
           <div className="bg-white rounded-3xl p-6 border border-slate-200">
-            <div className="text-sm font-medium text-slate-600 mb-2">
-              Completed Logs
-            </div>
-            <div className="text-2xl font-bold text-slate-900">
+            <div className="text-sm font-medium text-slate-600 mb-2">Logs</div>
+            <div className="text-md text-2xl font-bold text-slate-900">
               {getTotalLogs}
             </div>
             <div className="text-xs text-slate-500 mt-2">This month</div>
@@ -197,7 +195,7 @@ export default function BusinessPage() {
 
           <div className="bg-white rounded-3xl p-6 border border-emerald-200">
             <div className="text-sm font-medium mb-2">Paid Invoices</div>
-            <div className="text-2xl font-bold text-emerald-600 mb-1">
+            <div className="text-md sm:text-2xl font-bold text-emerald-600 mb-1">
               {formatCurrency(getPaidAmount())}
             </div>
             <div className="text-xs text-emerald-600">
@@ -212,8 +210,10 @@ export default function BusinessPage() {
           </div>
 
           <div className="bg-white rounded-3xl p-6 border border-amber-200 ">
-            <div className="text-sm font-medium mb-2">Pending Payments</div>
-            <div className="text-2xl font-bold text-orange-600 mb-1">
+            <div className="text-sm font-medium mb-2 truncate">
+              Pending Payments
+            </div>
+            <div className="text-md sm:text-2xl font-bold text-orange-600 mb-1">
               {formatCurrency(getPendingAmount())}
             </div>
             <div className="text-xs text-amber-600">
