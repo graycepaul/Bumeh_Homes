@@ -9,7 +9,7 @@ export default function AddLogModal({
   trips: initialTrips = 1,
 }) {
   // Fixed transport costs and product prices (in Naira)
-  const TRANSPORT_COST = { Idu: 40000, Aviation: 80000 };
+  const TRANSPORT_COST = { Idu: 40000, Aviation: 70000 };
   const PRODUCT_PRICES = {
     Dust: 12000,
     "3/8": 12000,
