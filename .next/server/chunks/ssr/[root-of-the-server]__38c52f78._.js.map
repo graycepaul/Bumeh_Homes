@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":["file:///Users/mac/Documents/projects/Web%20Apps/Bumeh%20Homes/src/app/page.js"],"sourcesContent":["\"use client\";\nimport Image from \"next/image\";\nimport Link from \"next/link\";\nimport { motion } from \"framer-motion\";\nimport { artworks, collections, processSteps } from \"./data\";\n\nexport default function Home() {\n  return <div className=\"bg-white\">Bumeh Homes</div>;\n}\n"],"names":[],"mappings":";;;;AACA;AACA;;;;;;AAFA;;;;;;AAMe,SAAS;IACtB,qBAAO,8OAAC;QAAI,WAAU;kBAAW;;;;;;AACnC","debugId":null}}]
+}
