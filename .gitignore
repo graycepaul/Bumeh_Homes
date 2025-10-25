@@ -1,0 +1,17 @@
+# Node modules
+node_modules/
+
+# Next.js build folders
+.next/
+out/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MacOS system files
+.DS_Store
+
+# Environment variables
+.env
